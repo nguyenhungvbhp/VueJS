@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Tutorial 1</title>
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+<div id="example" v-bind:class="classObject">
+    <p>Thông điệp ban đầu: " {{mgs}}"</p>
+    <p>Thông điệp sau khi computed: "{{reversedMessage}}"</p>
+    <p>Computed property không được render lại vì caching: {{now}}</p>
+    <input  v-model="message" placeholder="edit me">
+    <p> Thông điệp {{message}}</p>
+    <p>Thông điệp nhiều dòng: {{content}}</p>
+    <textarea v-model="content" placeholder="Nội dung nhập..."></textarea>
+    <input type="checkbox" v-model="isChecked"/>
+    <label>{{isChecked}}</label>
+    <br>
+    <div>
+        <input id="thit-bo" type="checkbox" v-model="checkedNames" value="Thịt bò"> <label>Thịt bò</label><br>
+        <input id="thi-cho" type="checkbox" v-model="checkedNames" value="Thịt chó"><label>Thịt chó</label><br>
+        <input id="thit-ga" type="checkbox" v-model="checkedNames" value="Thịt gà"><label>Thị gà</label><br>
+        <input type="checkbox" id="thit-lon" type="checkbox" v-model="checkedNames" value="Thịt lợn"><label>Thịt lợn</label>
+    </div>
+    <p>Món đã chọn{{checkedNames}}</p>
+</div>
+
+
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
